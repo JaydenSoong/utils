@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group 'com.soong'
@@ -13,4 +14,12 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+publishing {
+    publications{
+        myPublish(MavenPublication) {
+            from components.java
+        }
+    }
 }
