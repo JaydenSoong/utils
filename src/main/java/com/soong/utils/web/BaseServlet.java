@@ -17,6 +17,9 @@ import java.lang.reflect.Method;
 */
 public abstract class BaseServlet extends HttpServlet {
    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       // 0. 设置编码
+       request.setCharacterEncoding("UTF-8");
+       response.setCharacterEncoding("UTF-8");
        // 1. 获取请求参数
        String methodName = request.getParameter("method");
        // 1.1 没有请求参数，抛出异常
