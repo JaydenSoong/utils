@@ -45,7 +45,7 @@ public abstract class BaseServlet extends HttpServlet {
            if (returns.contains(":")) {
                String[] split = returns.split(":");
                if (split[0].equals("r")) {
-                   response.sendRedirect(split[1]);
+                   response.sendRedirect(request.getContextPath() + split[1]);
                } else if (split[0].equals("f")){
                    request.getRequestDispatcher(split[1]).forward(request, response);
                } else {
