@@ -12,6 +12,11 @@ import java.util.Random;
  */
 public class VerificationUtils {
     public static String createVerificationCode(HttpServletResponse response) throws IOException {
+        //服务器通知浏览器不要缓存
+        response.setHeader("pragma","no-cache");
+        response.setHeader("cache-control","no-cache");
+        response.setHeader("expires","0");
+
         int width = 100;
         int height = 32;
         Random random = new Random();
@@ -32,7 +37,7 @@ public class VerificationUtils {
         // 6.将随机生成的验证码保存在 session 中
         //request.getSession().setAttribute("passcode", sb.toString());
         // 7.将图片对象写到页面中
-        ImageIO.write(image, "jpg", response.getOutputStream());
+        ImageIO.write(image, "PNG", response.getOutputStream());
         return sb.toString();
     }
 
