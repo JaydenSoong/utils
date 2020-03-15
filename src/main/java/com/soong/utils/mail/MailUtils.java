@@ -19,7 +19,7 @@ import java.util.Properties;
  * mail.smtp.auth=true
  */
 public final class MailUtils {
-    public static Properties prop = new Properties();
+    private static Properties prop = new Properties();
     //读取配置文件
     static {
         InputStream is = MailUtils.class.getClassLoader().getResourceAsStream("mail.properties");
