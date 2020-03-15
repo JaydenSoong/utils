@@ -1,4 +1,4 @@
-package com.soong.utils.jdbc;
+package com.soong.utils.db;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 
@@ -12,7 +12,7 @@ import java.util.Properties;
  * 使用该类需要提供一个 druid.properties 的配置文件。
  * 将该文件放在模块(idea)或工程(eclipse)的 src 目录下。
  */
-public class JDBCUtils {
+public class JdbcUtils {
     /**
      * 数据库连接池对象
      */
@@ -26,7 +26,7 @@ public class JDBCUtils {
         try {
             Properties prop = new Properties();
             // 通过类加载器将配置文件变为字节输入流
-            InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties");
+            InputStream is = JdbcUtils.class.getClassLoader().getResourceAsStream("druid.properties");
             assert is != null;
             prop.load(is);
             //通过工厂类的方法为静态变量 ds 赋值。

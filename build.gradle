@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.soong'
-version '1.5.1'
+version '1.6.2'
 
 sourceCompatibility = 11.0
 
@@ -16,6 +16,7 @@ repositories {
 dependencies {
     compile group: 'com.alibaba', name: 'druid', version: '1.1.20'
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    compile group: 'javax.mail', name: 'mail', version: '1.4.7'
     // jackson 工具，用来转换 json 与 java 对象
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.2'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.2'

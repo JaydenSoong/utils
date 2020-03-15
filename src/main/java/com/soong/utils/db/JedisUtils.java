@@ -1,4 +1,4 @@
-package com.soong.utils.jedis;
+package com.soong.utils.db;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
