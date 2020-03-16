@@ -1,5 +1,6 @@
 package com.soong.utils.entity;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ import java.util.Map;
  *   由 totalCount 与 pageSize 计算得到的。
  * 6.查询条件：conditions，由用户的请求参数封装而成。在生成 PageBean 对象的时候设置好，返回给页面。
  */
-public class PageBean<T> {
+public class PageBean<T> implements Serializable {
     /**
      * 需要查询的数据表的总记录数
      */
